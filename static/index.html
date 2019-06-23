@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:800|Quicksand:700|Baloo" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="prefetch" href='background0.jpg'>
+	<link rel="prefetch" href='background1.jpg'>
+	<link rel="prefetch" href='background2.jpg'>
+	<link rel="prefetch" href='background3.jpg'>
+	<link rel="prefetch" href='background4.jpg'>
+	<link rel="prefetch" href='background5.jpg'>
+	<link rel="prefetch" href='background6.jpg'>
+	<link rel="prefetch" href='background7.jpg'>
+	<link rel="prefetch" href='background8.jpg'>
+	<link rel="prefetch" href='background9.jpg'>
+	<link rel="prefetch" href='background10.jpg'>
+	<link rel="prefetch" href='background11.jpg'>
+    <link rel="prefetch" href='background12.jpg'>
+    <script
+	src="https://code.jquery.com/jquery-3.4.1.js"
+	integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div id="bgImage">
+        <header>
+            <div id="logo"><i class="fas fa-cube"></i> Boardwalk</div>
+            <div id="background" onclick="changeBackground()"></div>
+            <div id="fullscreen" onclick="fullscreen()"></div>
+            <div id="trash" onclick="restore()"></div>
+        </header>
+        <div id="workspace">
+            <div id="laneMaker">
+                <input id="newLaneTitle" placeholder="Lane Title" onfocusout="hideLaneMaker()" type="text">
+                <button onclick="laneFactory()">CREATE</button>
+            </div>
+            <div id="laneBtn" onclick="laneMaker()">+ Add Lane</div>
+        </div>
+        <div id="cardMaker" class="card cardMaker">
+            <input id="newCardTitle" placeholder="Card Title" onfocusout="hideCardMaker()" type="text">
+            <button id="cardMakerBtn"  onclick="cardFactory()">CREATE</button>
+        </div>
+        <div id="greyOut" onclick="endEdit()"></div>
+        <div id="cardEditer">
+            <div id="cardEditerTitle">Title</div>
+            <input id="inputTitle" type="text">
+            <div id="cardEditerBody">Body</div>
+            <textarea id="inputBody" cols="75" rows="10"></textarea>
+            <div id="colors">
+                <div onclick="changeColor('#DB2955')" id="red" class="color"></div>
+                <div onclick="changeColor('#5BC0EB')" id="blue" class="color"></div>
+                <div onclick="changeColor('#006473')" id="green" class="color"></div>
+                <div onclick="changeColor('#D89F43')" id="orange" class="color"></div>
+                <div onclick="changeColor('#FDE74C')" id="yellow" class="color"></div>
+                <div onclick="changeColor('none')" id="none" class="color"></div>
+            </div>
+            <button id="updateBtn" onclick="updateCard()">Update Card</button>
+        </div>
+        <script src="index.js"></script>
+</div>
+</body>
+</html>
