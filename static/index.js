@@ -447,8 +447,6 @@ $(document).ready(function() {
 			catalog = res;
 		})
 	).then(() => {
-		console.dir(cards);
-		console.dir(catalog);
 		for (let lane of catalog) {
 			let newLane = document.createElement('div');
 			let newCards = '';
@@ -477,7 +475,6 @@ $(document).ready(function() {
 					newCard.childNodes[1].style.display = 'none';
 				}
 				newCards += newCard.outerHTML;
-				console.dir(newCard);
 			}
 			newLane.classList = 'swimlane';
 			newLane.draggable = 'true';
